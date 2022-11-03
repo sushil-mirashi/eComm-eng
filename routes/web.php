@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CacheController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,4 @@ Route::get('/login', function () {
     return view('login');
 });
 Route::post('/login', [UserController::class, "login"]);
-// Route::post('/login', function () {
-//     echo "inNNNNN";
-//     exit;
-// });
+Route::get('/cache', [CacheController::class, 'index']);
