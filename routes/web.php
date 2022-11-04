@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CacheController;
+use App\Http\Controllers\CountryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,5 @@ Route::get('/login', function () {
 });
 Route::post('/login', [UserController::class, "login"]);
 Route::get('/cache', [CacheController::class, 'index']);
+Route::get('/country', [CountryController::class, 'index']);
+Route::get('/getcountrycode/{name}', [CountryController::class, 'getCountryCode']);
