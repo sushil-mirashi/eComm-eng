@@ -57,7 +57,7 @@ return [
         'single' => [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),
-            'level' => env('LOG_LEVEL', 'debug'),
+            'level' => env('LOG_LEVEL', 'DEBUG'),
         ],
 
         'daily' => [
@@ -113,6 +113,12 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+
+        'custom_logging_activity' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/logs_custom_channel.log'),
+            'level' => env('LOG_LEVEL', 'debug')
+        ]
     ],
 
 ];
